@@ -1,2 +1,2 @@
-# application
+# Application Site
 The homepage to host the Oz Foundation application form download.
