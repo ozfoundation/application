@@ -1,4 +1,4 @@
-# [Application Site](http://www.ozfoundation.com/)
+# [www.ozfoundation.com](http://www.ozfoundation.com/)
 The homepage to host the Oz Foundation application form download.
 This is the official repository for the website to host the Oz Foundation application form.
 
