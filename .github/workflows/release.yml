@@ -9,6 +9,17 @@ permissions:
     contents: write
 
 jobs:
+  spell-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4.1.7
+
+      - name: Spellcheck
+        uses: rojopolis/spellcheck-github-actions@v0.41.0
+        with:
+            config-path: .github/spellcheck.yml
+
   build-proof:
     runs-on: ubuntu-latest
     steps:
@@ -35,5 +46,4 @@ jobs:
         with:
             dry_run: false # useful for debugging workflow when true
             github_token: ${{ secrets.GITHUB_TOKEN }}
-            default_bump: false # minor? will add after v1.0.0
-      
+            default_bump: patch # minor will replace after v1.0.0
