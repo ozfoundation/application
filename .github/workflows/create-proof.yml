@@ -1,0 +1,26 @@
+name: Proof HTML
+on:
+  push:
+    branches:
+      main
+  pull_request:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Create proof
+        uses: anishathalye/proof-html@v1.1.0
+        with:
+          directory: ./
+          html_file: 'index.html'
+          output_file: 'proof.png'
+
+      - name: Upload proof as artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: html-proof
+          path: proof.png
