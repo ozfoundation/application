@@ -1,0 +1,40 @@
+name: Test and Release
+on:
+  push:
+    branches:
+      main
+  workflow_dispatch:
+jobs:
+  build-proof:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4.1.7
+
+      - name: Debug files
+        run: tree
+
+      - name: Build proof
+        uses: anishathalye/proof-html@v2.1.2
+        with:
+          directory: ./
+
+  semantic-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4.1.7
+
+      - name: get tag
+        id: tag_version
+        uses: mathieudutour/github-tag-action@v6.2
+        with:
+            dry_run: false # useful for debugging workflow when true
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            default_bump: false # minor? will add after v1.0.0
+      - name: Create a GitHub release
+        uses: ncipollo/release-action@v1.14.0
+        with:
+          tag: ${{ steps.tag_version.outputs.new_tag }}
+          name: Release ${{ steps.tag_version.outputs.new_tag }}
+          body: ${{ steps.tag_version.outputs.changelog }}
