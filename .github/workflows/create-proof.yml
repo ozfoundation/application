@@ -3,9 +3,6 @@ on:
   push:
     branches:
       main
-  pull_request:
-    branches:
-      main
   workflow_dispatch:
 jobs:
   build-proof:
@@ -18,11 +15,23 @@ jobs:
         with:
           directory: ./
 
-      - name: Debug outputted files
-        run: sudo apt-get install tree -y && tree
+      - name: Debug files
+        run: tree
 
-      - name: Upload proof as artifact
-        uses: actions/upload-artifact@v4.4.0
+  semantic-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4.1.7
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4.0.3
         with:
-          name: html-proof
-          path: tmp
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run semantic-release
+        run: npx semantic-release
+
