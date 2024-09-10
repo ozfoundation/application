@@ -1,4 +1,5 @@
 # [www.ozfoundation.com](http://www.ozfoundation.com/)
+## [![Test and Release](https://github.com/ozfoundation/application/actions/workflows/release.yml/badge.svg)](https://github.com/ozfoundation/application/actions/workflows/release.yml) [![Auto Assign](https://github.com/ozfoundation/application/actions/workflows/auto-assign.yml/badge.svg)](https://github.com/ozfoundation/application/actions/workflows/auto-assign.yml) [![pages-build-deployment](https://github.com/ozfoundation/application/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/ozfoundation/application/actions/workflows/pages/pages-build-deployment)
 The homepage to host the Oz Foundation application form download.
 This is the official repository for the website to host the Oz Foundation application form.
 
