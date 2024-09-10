@@ -48,3 +48,9 @@ jobs:
             dry_run: false # useful for debugging workflow when true
             github_token: ${{ secrets.GITHUB_TOKEN }}
             default_bump: patch # minor will replace after v1.0.0 because only new application files are added by non-developers
+      - name: Create a GitHub release
+        uses: ncipollo/release-action@v1.14.0
+        with:
+          tag: ${{ steps.tag_version.outputs.new_tag }}
+          name: Release ${{ steps.tag_version.outputs.new_tag }}
+          body: ${{ steps.tag_version.outputs.changelog }}
