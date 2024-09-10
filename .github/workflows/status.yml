@@ -28,3 +28,16 @@ jobs:
           else
             echo "Health check passed: The downloaded webpage matches the local index.html"
           fi
+
+  create-issue:
+    runs-on: ubuntu-latest
+    if: success()
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4.1.7
+      - name: Create Issue
+        run: |
+          gh issue create --title "Health Check Failed" --body "The downloaded webpage does not match the local index.html. Please investigate the issue."
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
