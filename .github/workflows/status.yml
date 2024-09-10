@@ -17,7 +17,7 @@ jobs:
         run: sudo apt-get install -y wget
 
       - name: Download Webpage
-        run: wget -O downloaded_index.html https://ozfoundation.com
+        run: wget -O downloaded_index.html https://www.ozfoundation.com
 
       - name: Compare with Local index.html
         run: |
