@@ -1,0 +1,30 @@
+name: Health Check
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # Runs every 6 hours
+  workflow_dispatch:
+
+jobs:
+  health-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4.1.7
+
+      - name: Install wget
+        run: sudo apt-get install -y wget
+
+      - name: Download Webpage
+        run: wget -O downloaded_index.html https://ozfoundation.com
+
+      - name: Compare with Local index.html
+        run: |
+          diff downloaded_index.html index.html
+          if [ $? -ne 0 ]; then
+            echo "Health check failed: The downloaded webpage does not match the local index.html"
+            exit 1
+          else
+            echo "Health check passed: The downloaded webpage matches the local index.html"
+          fi
