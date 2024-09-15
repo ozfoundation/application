@@ -1,0 +1,87 @@
+/* Reset some default styles */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic body styles */
+body {
+    font-family: Georgia, serif;
+    background-color: #1a2e40;
+    color: #ffffff; /* Text color */
+    line-height: 1.6;
+    padding: 20px;
+    text-align: center; /* Center all text by default */
+}
+
+/* Header styles */
+header h1 {
+    font-weight: bold;
+    color: black;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Section titles */
+h2 {
+    font-family: Georgia, serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Paragraph and Box styles */
+.box {
+    background-color: #ecf0f1; /* Lighter background for text boxes */
+    color: #333; /* Darker text color for readability */
+    padding: 15px;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 800px; /* Limit width for better readability */
+    text-align: left; /* Align text within boxes to the left */
+}
+
+/* Unordered list with hyphens */
+ul {
+    list-style-type: none; /* Remove bullet points */
+    padding-left: 0;
+}
+
+ul li::before {
+    content: "- "; /* Add hyphen before list items */
+}
+
+/* Link styles */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Button styles */
+.download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: Calibri, Arial, sans-serif;
+}
+
+.download-button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer styles */
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #1a2e40;
+    color: #fff;
+    text-align: center;
+}
