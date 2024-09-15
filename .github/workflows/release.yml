@@ -12,8 +12,14 @@ jobs:
   spell-check:
     runs-on: ubuntu-latest
     steps:
+      - name: Install pdftotext
+        run: sudo apt-get install -y poppler-utils
+
       - name: Checkout code
         uses: actions/checkout@v4.1.7
+
+      - name: Convert PDF to text
+        run: pdftotext files/application.pdf files/application.txt
 
       - name: Spellcheck
         uses: rojopolis/spellcheck-github-actions@0.41.0

@@ -16,4 +16,5 @@ matrix:
   sources:
   - '**/*.md'
   - '**/*.html'
+  - 'files/application.txt'
   default_encoding: utf-8
