@@ -8,4 +8,4 @@ updates:
   - package-ecosystem: "github-actions" # workflow dependencies
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "monthly"
