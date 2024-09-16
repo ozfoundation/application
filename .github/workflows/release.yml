@@ -7,9 +7,15 @@ on:
 
 permissions:
     contents: write
+    pages: write
+    id-token: write
+
+concurrency: # Only 1 concurrent deployment, skip runs queued between the run in-progress and latest queued
+    group: "pages"
+    cancel-in-progress: false
 
 jobs:
-  spell-check:
+  spell-check: # Spellcheck the html, markdown, and pdf files
     runs-on: ubuntu-latest
     steps:
       - name: Install pdftotext
@@ -26,7 +32,7 @@ jobs:
         with:
           config_path: .github/spellcheck.yml
 
-  build-proof:
+  build-proof: # Tests the html files ability to be rendered
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -40,7 +46,7 @@ jobs:
         with:
           directory: ./
 
-  semantic-version:
+  semantic-version: # Bumps the version number based on the commit messages
     needs: [build-proof, spell-check]
     runs-on: ubuntu-latest
     steps:
@@ -60,3 +66,22 @@ jobs:
           tag: ${{ steps.tag_version.outputs.new_tag }}
           name: Release ${{ steps.tag_version.outputs.new_tag }}
           body: ${{ steps.tag_version.outputs.changelog }}
+
+  deploy: # Deploys the application to GitHub Pages
+    needs: [semantic-version]
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.7
+      - name: Setup Pages
+        uses: actions/configure-pages@v5.0.0
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3.0.1
+        with:
+          path: '.'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4.0.5

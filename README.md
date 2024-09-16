@@ -4,7 +4,7 @@ The homepage to host the Oz Foundation application form download.
 This is the official repository for the website to host the Oz Foundation application form.
 
 To update the application file:
-* Name the file you wish to upload "application.pdf".
+* Name the file you wish to upload "oz-application.pdf".
 * Make sure you are signed in to GitHub.
 * Open the "files" directory.
 * Click the "Add file" drop-down and select "Upload files".
