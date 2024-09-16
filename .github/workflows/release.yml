@@ -25,7 +25,7 @@ jobs:
         uses: actions/checkout@v4.1.7
 
       - name: Convert PDF to text
-        run: pdftotext files/application.pdf files/application.txt
+        run: pdftotext files/oz-application.pdf files/application.txt
 
       - name: Spellcheck
         uses: rojopolis/spellcheck-github-actions@0.41.0
