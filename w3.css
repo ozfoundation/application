@@ -4,53 +4,111 @@ body, h1, h2, p, ul {
     padding: 0;
 }
 
+
 /* Basic body styles */
 body {
     font-family: Georgia, serif;
     background-color: #1a2e40;
-    color: #ffffff; /* Text color */
+    color: #ffffff;
     line-height: 1.6;
     padding: 20px;
-    text-align: center; /* Center all text by default */
 }
+
 
 /* Header styles */
 header h1 {
     font-weight: bold;
-    color: black;
-    font-size: 2.5em;
+    color: #ffffff; /* Title text color changed to white */
+    font-size: 3em; /* Increased font size for the title */
     margin-bottom: 20px;
     text-align: center;
 }
 
+
 /* Section titles */
 h2 {
     font-family: Georgia, serif;
-    font-size: 24px;
+    font-size: 22px;
     margin-bottom: 10px;
-    text-align: center;
+    text-align: center; /* Centering subtitles */
 }
+
 
 /* Paragraph and Box styles */
 .box {
-    background-color: #ecf0f1; /* Lighter background for text boxes */
-    color: #333; /* Darker text color for readability */
+    background-color: #ecf0f1;
+    color: #333;
     padding: 15px;
     margin: 20px auto;
     border-radius: 10px;
-    max-width: 800px; /* Limit width for better readability */
-    text-align: left; /* Align text within boxes to the left */
+    max-width: 90%; /* Consistent width for all boxes */
+    font-size: 14px;
+    text-align: center;
+    width: 90%; /* Ensures consistent width across all boxes */
 }
+
+
+/* Align content with centered layout */
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* Left side text box container */
+.text-boxes {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Right side images container */
+.images {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* Extra space between images */
+}
+
+
+/* Center the top image */
+.full-width-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+
+/* Style for images on the right side */
+.image-right {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+.image1-tall {
+    max-height: 450px; /* Increased height for image1 */
+}
+
 
 /* Unordered list with hyphens */
 ul {
-    list-style-type: none; /* Remove bullet points */
+    list-style-type: none;
     padding-left: 0;
 }
 
+
 ul li::before {
-    content: "- "; /* Add hyphen before list items */
+    content: "- ";
 }
+
 
 /* Link styles */
 a {
@@ -58,9 +116,11 @@ a {
     text-decoration: none;
 }
 
+
 a:hover {
     text-decoration: underline;
 }
+
 
 /* Button styles */
 .download-button {
@@ -73,15 +133,7 @@ a:hover {
     font-family: Calibri, Arial, sans-serif;
 }
 
+
 .download-button:hover {
     background-color: #0056b3;
-}
-
-/* Footer styles */
-footer {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #1a2e40;
-    color: #fff;
-    text-align: center;
 }
