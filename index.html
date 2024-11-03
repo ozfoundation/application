@@ -1,156 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="w3.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oz Foundation</title>
     <style>
-        body {
-            font-family: Georgia, serif;
-            background-color: #152438; /* Slightly lighter blue */
-            color: #ccc;
-            line-height: 1.6;
-            padding: 20px;
-        }
-
-        header h1 {
-            font-family: Georgia, serif;
-            font-weight: bold;
-            color: white;
-            font-size: 2.5em;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .box {
-            background-color: rgba(255, 255, 255, 0.1);
-            color: #fff;
-            padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-        }
-
-        h2 {
-            font-family: Georgia, serif;
-            font-size: 24px;
-            text-align: center;
-            color: #fff;
-        }
-
-        p, ul {
-            font-family: Georgia, serif;
-            font-size: 18px;
-            margin-bottom: 20px;
-            color: #ccc;
-        }
-
-        ul {
-            list-style-type: none; /* Removes default bullet points */
-        }
-
-        ul li::before {
-            content: "- "; /* Adds a hyphen before each list item */
-        }
-
-        .download-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
-            border-radius: 5px;
-            text-decoration: none;
-        }
-
-        .download-button:hover {
-            background-color: #0056b3;
-        }
-
-        img {
-            width: 100%;
-            max-height: 400px;
-            object-fit: cover;
-        }
-
-        /* Specific dimensions for the cropped image */
-        .scholar-image {
-            width: 900px;
-            height: 1599px;
-        }
+        /* Include the CSS code above here */
     </style>
 </head>
 <body>
 
-    <!-- Image 2 at the top -->
+
+    <!-- Full-width top image -->
     <section>
-        <img src="images/image2.png" alt="Foundation Image">
+        <img src="files/image2.png" alt="Foundation Full-width Image" class="full-width-image">
     </section>
+
 
     <header>
         <h1>Oz Foundation</h1>
     </header>
 
-    <section>
-        <h2>About Us</h2>
-        <div class="box">
-            <p>Oz Foundation has been helping scholars since 2004. We are a family foundation that strongly believes a college education is the gateway to a successful future. We feel that financial hardship should not deter individuals from reaching this goal.</p>
-            <p>Oz Foundation operates in Santa Clara and San Diego Counties, supporting students who would otherwise not afford college. In addition to financial support, we provide mentorship to help students in their studies and adjustment to college life.</p>
+
+    <!-- Content layout with text boxes on the left and images on the right -->
+    <div class="content">
+        <!-- Text Boxes on the Left -->
+        <div class="text-boxes">
+            <section>
+                <h2>About Us</h2>
+                <div class="box">
+                    <p>Oz Foundation has been helping scholars since 2004. We are a family foundation that strongly believes a college education is the gateway to a successful future. We feel that financial hardship should not deter individuals from reaching this goal.</p>
+                    <p>Oz Foundation operates in Santa Clara and San Diego Counties, supporting students who would otherwise not afford college. In addition to financial support, we provide mentorship to help students in their studies and adjustment to college life.</p>
+                </div>
+            </section>
+
+
+            <section>
+                <h2>Prospective Scholars</h2>
+                <div class="box">
+                    <p>Criteria:</p>
+                    <ul>
+                        <li>You must be a high school senior or junior college transfer student.</li>
+                        <li>You must have attended high school in Santa Clara County or San Diego County.</li>
+                        <li>This program is for low-income families. Supporting documentation like tax returns is required.</li>
+                        <li>You must have been accepted to a four-year accredited university.</li>
+                    </ul>
+                    <p>All applicants will be notified by mail or telephone regarding acceptance or decline. Award amounts are based on individual need.</p>
+                </div>
+            </section>
+
+
+            <section>
+                <h2>What to Expect if Accepted</h2>
+                <div class="box">
+                    <p>Maintain your grades and enrollment as a full-time student (with supporting paperwork), and you will be part of our program for up to four years. You will also be assigned a mentor to communicate directly with. We generally accept 2-5 new students per year.</p>
+                </div>
+            </section>
+
+
+            <section>
+                <h2>Foundation Family</h2>
+                <div class="box">
+                    <p>Oz Foundation has been helping students since 2004. We believe that education is the key that opens doors for families who otherwise might not afford the cost of college.</p>
+                </div>
+            </section>
+
+
+            <section>
+                <h2>Contact Information</h2>
+                <div class="box">
+                    <p>Colby Osborne-Smith</p>
+                    <p>Phone: 619-884-3535</p>
+                </div>
+            </section>
         </div>
-    </section>
 
-    <section>
-        <h2>Prospective Scholars</h2>
-        <div class="box">
-            <p>Criteria:</p>
-            <ul>
-                <li>You must be a high school senior or junior college transfer student.</li>
-                <li>You must have attended high school in Santa Clara County or San Diego County.</li>
-                <li>This program is for low-income families. Supporting documentation like tax returns is required.</li>
-                <li>You must have been accepted to a four-year accredited university.</li>
-            </ul>
-            <p>All applicants will be notified by mail or telephone regarding acceptance or decline. Award amounts are based on individual need.</p>
+
+        <!-- Images on the Right -->
+        <div class="images">
+            <img src="files/image1.jpg" alt="Foundation Image 1" class="image-right image1-tall">
+            <img src="files/image3.jpg" alt="Foundation Image 3" class="image-right">
         </div>
+    </div>
 
-        <!-- Image 1 (Scholar studying) below the title -->
-        <img src="images/image1.jpg" alt="Scholar Studying" class="scholar-image">
+
+    <!-- Download button centered at the bottom -->
+    <section style="text-align: center; margin-top: 20px;">
+        <a href="files/application.pdf" download class="download-button">Click here to download the 2024-2025 application form</a>
     </section>
 
-    <section>
-        <h2>What to Expect if Accepted</h2>
-        <div class="box">
-            <p>Maintain your grades and enrollment as a full-time student (with supporting paperwork), and you will be part of our program for up to four years. You will also be assigned a mentor to communicate directly with. We generally accept 2-5 new students per year.</p>
-        </div>
-    </section>
 
-    <section>
-        <h2>Foundation Family</h2>
-        <div class="box">
-            <p>Oz Foundation has been helping students since 2004. We believe that education is the key that opens doors for families who otherwise might not afford the cost of college.</p>
-        </div>
-    </section>
-
-    <!-- Contact Information modified -->
-    <section>
-        <h2>Contact Information</h2>
-        <div class="box">
-            <p>Colby Osborne-Smith</p>
-            <p>Phone: 619-884-3535</p>
-            <p>Picture is not cropped yet/ Will edit Logo to have white text</p>
-        </div>
-    </section>
-
-    <section>
-        <div style="text-align: center;">
-            <a href="files/oz-application.pdf" download class="download-button">Click here to download the 2024-2025 application form</a>
-        </div>
-    </section>
-
-    <!-- Image 2 at the bottom -->
-    <section>
-        <img src="images/image2.png" alt="Foundation Image">
-    </section>
-
-    <!-- Footer removed -->
 </body>
 </html>
