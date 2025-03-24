@@ -1,89 +1,363 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="w3.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oz Foundation</title>
-    
-    <!-- Favicon link added -->
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.30.0/tabler-icons.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-container">
+      <header class="site-header">
+        <h1 class="site-name">Site name</h1>
+        <nav class="main-nav">
+          <a href="#" class="nav-link">Page</a>
+          <a href="#" class="nav-link">Page</a>
+          <a href="#" class="nav-link">Page</a>
+          <button class="primary-button nav-button">Button</button>
+        </nav>
+        <button class="mobile-menu-toggle"><i class="ti ti-menu-2"></i></button>
+      </header>
 
-    <style>
-        /* Include the CSS code above here */
-    </style>
-</head>
-<body>
+      <main class="main-content">
+        <section class="hero-section">
+          <div class="hero-content">
+            <h1 class="hero-title">Landing page title</h1>
+            <p class="hero-description">
+              Subheading that sets up context, shares more info about the
+              website, or generally gets people psyched to keep scrolling.
+            </p>
+          </div>
+          <button class="primary-button hero-button">Button</button>
+        </section>
 
-    <!-- Full-width top image -->
-    <section>
-        <img src="images/image2.png" alt="Foundation Full-width Image" class="full-width-image">
-    </section>
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/eaa164568db6fc8332b95031d9df9f3fa4b47c7c"
+          alt=""
+          class="hero-image"
+        />
 
-    <header>
-        <h1>Oz Foundation</h1>
-    </header>
+        <section class="features-section">
+          <h2 class="section-heading">Section heading</h2>
+          <div class="features-grid">
+            <article class="feature-card">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/906c15cb36b2ffd37cebe709faad2e39fda4772b"
+                alt=""
+                class="feature-image"
+              />
+              <h3 class="feature-title">Subheading</h3>
+              <p class="feature-description">
+                Body text for whatever you'd like to add more to the subheading.
+              </p>
+            </article>
 
-    <!-- Content layout with text boxes on the left and images on the right -->
-    <div class="content">
-        <!-- Text Boxes on the Left -->
-        <div class="text-boxes">
-            <section>
-                <h2>About Us</h2>
-                <div class="box">
-                    <p>Oz Foundation has been helping scholars since 2004. We are a family foundation that strongly believes a college education is the gateway to a successful future. We feel that financial hardship should not deter individuals from reaching this goal.</p>
-                    <p>Oz Foundation operates in Santa Clara and San Diego Counties, supporting students who would otherwise not afford college. In addition to financial support, we provide mentorship to help students in their studies and adjustment to college life.</p>
+            <article class="feature-card">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/7550baea56a83c8d84e69ac745bae1a985ffc560"
+                alt=""
+                class="feature-image"
+              />
+              <h3 class="feature-title">Subheading</h3>
+              <p class="feature-description">
+                Body text for whatever you'd like to expand on the main point.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/65b6a9e22c84e017cff17f98c74a3599a909479a"
+                alt=""
+                class="feature-image"
+              />
+              <h3 class="feature-title">Subheading</h3>
+              <p class="feature-description">
+                Body text for whatever you'd like to share more.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <h2 class="section-heading">Section heading</h2>
+          <div class="content-container">
+            <div class="content-text">
+              <div class="content-blocks">
+                <div class="content-block">
+                  <h3 class="content-title">Subheading</h3>
+                  <p class="content-description">
+                    Body text for whatever you'd like to expand on the main
+                    point.
+                  </p>
                 </div>
-            </section>
 
-            <section>
-                <h2>Prospective Scholars</h2>
-                <div class="box">
-                    <p>Criteria:</p>
-                    <ul>
-                        <li>You must be a high school senior or junior college transfer student.</li>
-                        <li>You must have attended high school in Santa Clara County or San Diego County.</li>
-                        <li>This program is for low-income families. Supporting documentation like tax returns is required.</li>
-                        <li>You must have been accepted to a four-year accredited university.</li>
-                    </ul>
-                    <p>All applicants will be notified by mail or telephone regarding acceptance or decline. Award amounts are based on individual need.</p>
+                <div class="content-block">
+                  <h3 class="content-title">Subheading</h3>
+                  <p class="content-description">
+                    Body text for whatever you'd like to say. Add main takeaway
+                    points, quotes, anecdotes.
+                  </p>
                 </div>
-            </section>
 
-            <section>
-                <h2>What to Expect if Accepted</h2>
-                <div class="box">
-                    <p>Maintain your grades and enrollment as a full-time student (with supporting paperwork), and you will be part of our program for up to four years. You will also be assigned a mentor to communicate directly with. We generally accept 2-5 new students per year.</p>
+                <div class="content-block">
+                  <h3 class="content-title">Subheading</h3>
+                  <p class="content-description">
+                    Body text for whatever you'd like to add more to the main
+                    point. It provides details, explanations, and context.
+                  </p>
                 </div>
-            </section>
+              </div>
 
-            <section>
-                <h2>Foundation Family</h2>
-                <div class="box">
-                    <p>Oz Foundation has been helping students since 2004. We believe that education is the key that opens doors for families who otherwise might not afford the cost of college.</p>
-                </div>
-            </section>
+              <div class="button-group">
+                <button class="primary-button">Button</button>
+                <button class="secondary-button">Secondary button</button>
+              </div>
+            </div>
 
-            <section>
-                <h2>Contact Information</h2>
-                <div class="box">
-                    <p>Colby Osborne-Smith</p>
-                    <p>Phone: 619-884-3535</p>
+            <div class="content-image-container">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/764e452aded8904c00d5a8b834953ea86e060ead"
+                alt=""
+                class="content-image"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section class="gallery-section">
+          <h2 class="section-heading">Section heading</h2>
+          <div class="gallery-grid">
+            <article class="gallery-item">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/9aef47e43079ddb979cf6cfc7731187a338b62ef"
+                alt=""
+                class="gallery-image"
+              />
+              <h3 class="gallery-title">Subheading</h3>
+              <p class="gallery-description">
+                Body text for whatever you'd like to add more to the subheading.
+              </p>
+            </article>
+
+            <article class="gallery-item">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/f812676722b775c7c22c7e7b8475714e8da69399"
+                alt=""
+                class="gallery-image"
+              />
+              <h3 class="gallery-title">Subheading</h3>
+              <p class="gallery-description">
+                Body text for whatever you'd like to expand on the main point.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="cta-section">
+          <h2 class="section-heading">Section heading</h2>
+          <div class="cta-buttons">
+            <button class="primary-button cta-button">Button</button>
+            <button class="secondary-button cta-button">
+              Secondary button
+            </button>
+          </div>
+        </section>
+
+        <section class="testimonials-section">
+          <h2 class="section-heading">Section heading</h2>
+          <div class="testimonials-grid">
+            <article class="testimonial-card">
+              <blockquote class="testimonial-quote">
+                "A terrific piece of praise"
+              </blockquote>
+              <div class="testimonial-author">
+                <div class="author-avatar">
+                  <svg
+                    width="45"
+                    height="45"
+                    viewBox="0 0 149 50"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <circle cx="22.5" cy="25" r="22.5" fill="#D9D9D9"></circle>
+                    <circle
+                      cx="22.5"
+                      cy="25"
+                      r="22.5"
+                      fill="url(#pattern0_1_1932)"
+                    ></circle>
+                    <defs>
+                      <pattern
+                        id="pattern0_1_1932"
+                        patternContentUnits="objectBoundingBox"
+                        width="1"
+                        height="1"
+                      >
+                        <use
+                          xlink:href="#image0_1_1932"
+                          transform="translate(-0.0809929) scale(0.000283688)"
+                        ></use>
+                      </pattern>
+                    </defs>
+                  </svg>
                 </div>
-            </section>
+                <div class="author-info">
+                  <p class="author-name">Name</p>
+                  <p class="author-description">Description</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial-card">
+              <blockquote class="testimonial-quote">
+                "A fantastic bit of feedback"
+              </blockquote>
+              <div class="testimonial-author">
+                <div class="author-avatar">
+                  <svg
+                    width="45"
+                    height="45"
+                    viewBox="0 0 150 50"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <circle
+                      cx="22.8333"
+                      cy="25"
+                      r="22.5"
+                      fill="#D9D9D9"
+                    ></circle>
+                    <circle
+                      cx="22.8333"
+                      cy="25"
+                      r="22.5"
+                      fill="url(#pattern0_1_1939)"
+                    ></circle>
+                    <defs>
+                      <pattern
+                        id="pattern0_1_1939"
+                        patternContentUnits="objectBoundingBox"
+                        width="1"
+                        height="1"
+                      >
+                        <use
+                          xlink:href="#image0_1_1939"
+                          transform="translate(0 -0.00468211) scale(0.000246427)"
+                        ></use>
+                      </pattern>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="author-info">
+                  <p class="author-name">Name</p>
+                  <p class="author-description">Description</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial-card">
+              <blockquote class="testimonial-quote">
+                "A genuinely glowing review"
+              </blockquote>
+              <div class="testimonial-author">
+                <div class="author-avatar">
+                  <svg
+                    width="45"
+                    height="45"
+                    viewBox="0 0 150 50"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <circle
+                      cx="23.1665"
+                      cy="25"
+                      r="22.5"
+                      fill="#D9D9D9"
+                    ></circle>
+                    <circle
+                      cx="23.1665"
+                      cy="25"
+                      r="22.5"
+                      fill="url(#pattern0_1_1946)"
+                    ></circle>
+                    <defs>
+                      <pattern
+                        id="pattern0_1_1946"
+                        patternContentUnits="objectBoundingBox"
+                        width="1"
+                        height="1"
+                      >
+                        <use
+                          xlink:href="#image0_1_1946"
+                          transform="translate(0 -0.250183) scale(0.0003663)"
+                        ></use>
+                      </pattern>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="author-info">
+                  <p class="author-name">Name</p>
+                  <p class="author-description">Description</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <h2 class="footer-site-name">Site name</h2>
+        <div class="footer-content">
+          <div class="social-icons">
+            <a href="#" class="social-icon">
+              <svg width="40" height="40"></svg>
+            </a>
+            <a href="#" class="social-icon">
+              <svg width="40" height="40"></svg>
+            </a>
+            <a href="#" class="social-icon">
+              <svg width="40" height="40"></svg>
+            </a>
+            <a href="#" class="social-icon">
+              <svg width="40" height="40"></svg>
+            </a>
+          </div>
+
+          <div class="footer-links">
+            <div class="footer-links-column">
+              <h3 class="footer-topic">Topic</h3>
+              <a href="#" class="footer-link">Page</a>
+              <a href="#" class="footer-link">Page</a>
+              <a href="#" class="footer-link">Page</a>
+            </div>
+
+            <div class="footer-links-column">
+              <h3 class="footer-topic">Topic</h3>
+              <a href="#" class="footer-link">Page</a>
+              <a href="#" class="footer-link">Page</a>
+              <a href="#" class="footer-link">Page</a>
+            </div>
+
+            <div class="footer-links-column">
+              <h3 class="footer-topic">Topic</h3>
+              <a href="#" class="footer-link">Page</a>
+              <a href="#" class="footer-link">Page</a>
+              <a href="#" class="footer-link">Page</a>
+            </div>
+          </div>
         </div>
-
-        <!-- Images on the Right -->
-        <div class="images">
-            <img src="images/image1.jpg" alt="Foundation Image 1" class="image-right image1-tall">
-            <img src="images/image3.jpg" alt="Foundation Image 3" class="image-right">
-        </div>
+      </footer>
     </div>
-
-    <!-- Download button centered at the bottom -->
-    <section style="text-align: center; margin-top: 20px;">
-        <a href="files/oz-application.pdf" download class="download-button">Click here to download the 2025-2026 application form</a>
-    </section>
-
-</body>
+  </body>
 </html>
