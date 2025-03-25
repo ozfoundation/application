@@ -1,0 +1,200 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #fff;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+/* Header styles */
+.header {
+  padding: 0 80px;
+  height: 164px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+}
+
+.logo {
+  width: 705px;
+  height: 166px;
+}
+
+/* Main content styles */
+.main-content {
+  padding: 0 80px;
+}
+
+/* Hero section */
+.hero-section {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.foundation-title {
+  font-family: "Kiwi Maru", serif;
+  font-size: 64px;
+  color: #000;
+  letter-spacing: -1.28px;
+  font-weight: normal;
+}
+
+.cta-button {
+  color: #fff;
+  padding: 20px 32px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+  max-width: 844px;
+  background-color: #000;
+  border: none;
+}
+
+/* Section common styles */
+.about-section,
+.scholars-section,
+.expectations-section,
+.contact-section,
+.family-section {
+  margin-top: 80px;
+}
+
+.section-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #000;
+  letter-spacing: -0.96px;
+  margin-bottom: 24px;
+}
+
+.section-text {
+  font-size: 24px;
+  line-height: 150%;
+  color: #828282;
+  margin-bottom: 16px;
+}
+
+.section-text:last-child {
+  margin-bottom: 0;
+}
+
+.section-image {
+  width: 616px;
+  height: auto;
+  margin-left: 40px;
+  float: right;
+}
+
+/* Criteria styles */
+.criteria-content {
+  font-size: 24px;
+  line-height: 150%;
+  color: #828282;
+}
+
+.criteria-heading {
+  margin-bottom: 16px;
+}
+
+.criteria-item {
+  margin-bottom: 16px;
+}
+
+.criteria-important {
+  font-weight: 700;
+}
+
+/* Contact styles */
+.contact-info {
+  font-size: 24px;
+  line-height: 150%;
+  color: #828282;
+}
+
+/* Responsive styles */
+@media (max-width: 991px) {
+  .container {
+    max-width: 991px;
+    padding: 20px;
+  }
+
+  .header {
+    padding: 0 20px;
+    height: auto;
+  }
+
+  .logo {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+  }
+
+  .main-content {
+    padding: 0 20px;
+  }
+
+  .hero-section {
+    margin-top: 20px;
+  }
+
+  .cta-button {
+    font-size: 20px;
+    padding: 15px 24px;
+  }
+
+  .section-image {
+    width: 100%;
+    float: none;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+
+  .header {
+    padding: 0 10px;
+  }
+
+  .main-content {
+    padding: 0 10px;
+  }
+
+  .foundation-title {
+    font-size: 36px;
+  }
+
+  .cta-button {
+    font-size: 18px;
+    padding: 12px 20px;
+  }
+
+  .section-title {
+    font-size: 36px;
+  }
+
+  .section-text,
+  .criteria-content,
+  .contact-info {
+    font-size: 20px;
+  }
+}
