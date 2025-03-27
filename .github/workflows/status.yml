@@ -2,7 +2,7 @@ name: Health Check
 
 on:
   schedule:
-    - cron: '0 */6 * * *'  # Runs every 6 hours
+    - cron: "0 */6 * * *" # Runs every 6 hours
   workflow_dispatch:
 
 permissions:
@@ -15,6 +15,13 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4.1.7
+        with:
+          fetch-depth: 0 # Fetch all history and tags
+
+      - name: Checkout latest release
+        run: |
+          git fetch --tags
+          git checkout $(git tag | sort -V | tail -1)
 
       - name: Install wget
         run: sudo apt-get install -y wget
@@ -44,4 +51,3 @@ jobs:
           gh issue create --title "Health Check Failed" --body "The downloaded webpage does not match the local index.html. Please investigate the issue." --assignee gdsmith1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        
